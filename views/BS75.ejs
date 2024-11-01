@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewpot"content="width=device-width initial-scale=1.0">
+    <title>2DPDB</title>
+</head>
+<body style="background-color: rgba(0, 255, 255, 0.125);">
+    <div id = "header">
+        <ol>
+            
+        </ol>
+        <ol><h1 style="text-align: center;">2D 픽셀 그림판</h1></ol>
+        <ol>
+            <br>
+            <div style="text-align: center;">
+                <input type="button" value="Login" style="width: 130px;height: 42.5px;" onclick="location = '/login'">
+                <input type="button" value="join" style="width: 130px;height: 42.5px;" onclick="location = '/join'">
+            </div>
+        </ol>
+    </div>
+    <hr>
+    <div id="main">
+    <ol>
+        <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Colors</h2>
+        <input type="button" style="width: 75px;height: 50px;background-color: pink;" class = "palette">
+        <input type="button" style="width: 75px;height: 50px;background-color: red;" class = "palette">
+        <br>
+        <input type="button" style="width: 75px;height: 50px;background-color: #c60000;" class = "palette">
+        <input type="button" style="width: 75px;height: 50px;background-color: orange;" class = "palette">
+        <br>
+        <input type="button" style="width: 75px;height: 50px;background-color: orangered;" class = "palette">
+        <input type="button" style="width: 75px;height: 50px;background-color: rgb(139, 34, 34);" class = "palette">
+        <br>
+        <input type="button" style="width: 75px;height: 50px;background-color: rgba(255, 255, 0, 0.5);" class = "palette">
+        <input type="button" style="width: 75px;height: 50px;background-color: yellow;" class = "palette">
+        <br>
+        <input type="button" style="width: 75px;height: 50px;background-color: greenyellow;" class = "palette">
+        <input type="button" style="width: 75px;height: 50px;background-color: green;" class = "palette">
+        <br>
+        <input type="button" style="width: 75px;height: 50px;background-color: powderblue;" class = "palette">
+        <input type="button" style="width: 75px;height: 50px;background-color: blue;" class = "palette">  
+        <br>
+        <input type="button" style="width: 75px;height: 50px;background-color: darkblue;" class = "palette">
+        <input type="button" style="width: 75px;height: 50px;background-color: purple;" class = "palette">
+        <br>
+        <input type="button" style="width: 75px;height: 50px;background-color: gray;" class = "palette">
+        <input type="button" style="width: 75px;height: 50px;background-color: black;color: white;" class = "palette">
+    </ol>
+    <ol>
+        <br><br><br>
+        <div style="text-align: center">
+            <input type="button" style="width: 70px;height: 70px;" class = "canvas" id="00">
+            <input type="button" style="width: 70px;height: 70px;" class = "canvas" id="10">
+            <input type="button" style="width: 70px;height: 70px;" class = "canvas" id="20">
+            <input type="button" style="width: 70px;height: 70px;" class = "canvas" id="30">
+            <input type="button" style="width: 70px;height: 70px;" class = "canvas" id="40">
+            <input type="button" style="width: 70px;height: 70px;" class = "canvas" id="50">
+            <input type="button" style="width: 70px;height: 70px;" class = "canvas" id="60">
+            <br>
+            <input type="button" style="width: 70px;height: 70px;" class = "canvas" id="01">
+            <input type="button" style="width: 70px;height: 70px;" class = "canvas" id="11">
+            <input type="button" style="width: 70px;height: 70px;" class = "canvas" id="21">
+            <input type="button" style="width: 70px;height: 70px;" class = "canvas" id="31">
+            <input type="button" style="width: 70px;height: 70px;" class = "canvas" id="41">
+            <input type="button" style="width: 70px;height: 70px;" class = "canvas" id="51">
+            <input type="button" style="width: 70px;height: 70px;" class = "canvas" id="61">
+            <br>
+            <input type="button" style="width: 70px;height: 70px;" class = "canvas" id="02">
+            <input type="button" style="width: 70px;height: 70px;" class = "canvas" id="12">
+            <input type="button" style="width: 70px;height: 70px;" class = "canvas" id="22">
+            <input type="button" style="width: 70px;height: 70px;" class = "canvas" id="32">
+            <input type="button" style="width: 70px;height: 70px;" class = "canvas" id="42">
+            <input type="button" style="width: 70px;height: 70px;" class = "canvas" id="52">
+            <input type="button" style="width: 70px;height: 70px;" class = "canvas" id="62">
+            <br>
+            <input type="button" style="width: 70px;height: 70px;" class = "canvas" id="03">
+            <input type="button" style="width: 70px;height: 70px;" class = "canvas" id="13">
+            <input type="button" style="width: 70px;height: 70px;" class = "canvas" id="23">
+            <input type="button" style="width: 70px;height: 70px;" class = "canvas" id="33">
+            <input type="button" style="width: 70px;height: 70px;" class = "canvas" id="43">
+            <input type="button" style="width: 70px;height: 70px;" class = "canvas" id="53">
+            <input type="button" style="width: 70px;height: 70px;" class = "canvas" id="63">
+            <br>
+            <input type="button" style="width: 70px;height: 70px;" class = "canvas" id="04">
+            <input type="button" style="width: 70px;height: 70px;" class = "canvas" id="14">
+            <input type="button" style="width: 70px;height: 70px;" class = "canvas" id="24">
+            <input type="button" style="width: 70px;height: 70px;" class = "canvas" id="34">
+            <input type="button" style="width: 70px;height: 70px;" class = "canvas" id="44">
+            <input type="button" style="width: 70px;height: 70px;" class = "canvas" id="54">
+            <input type="button" style="width: 70px;height: 70px;" class = "canvas" id="64">
+        </div>
+    </ol>
+    <ol>
+        <div style="text-align: center;">
+            <h2>Tools</h2>
+            <input type="button" style="width: 150px;height: 65px;font-weight: 900" class = "tool" id  = "Brush">
+            <br>
+            <input type="button"  style="width: 150px;height: 65px;font-weight: 900" class = "tool" id = "Stamp1">
+            <br>
+            <input type="button"  style="width: 150px;height: 65px;font-weight: 900" class = "tool" id = "Stamp2">
+            <br>
+            <input type="button" style="width: 150px;height: 65px;font-weight: 900" class = "tool" id = "Paint">
+            <br>
+            <input type="button"  style="width: 150px;height: 65px;font-weight: 900" class = "tool" id = "Eraser">
+            <br>
+            <input type="button" style="width: 150px;height: 65px;font-weight: 900" id="Clear" id = "Clear">
+        </div>
+    </ol>
+    </div>
+    <div style="text-align: center;">
+        <h2>Drawing Board Size</h2>
+        <input type="button" value="3 * 5" style="width: 80px;height: 70px;" onclick="location = '/BS35'">
+        <input type="button" value="5 * 5" style="width: 80px;height: 70px;" onclick="location = '/BS55'">
+        <input type="button" value="7 * 5" style="width: 80px;height: 70px;" onclick="location = '/BS75'">
+        <input type="button" value="10 * 10" style="width: 80px;height: 70px;" onclick="location = '/BS1010'">
+        <div style="text-align: right;">
+    </div>
+</body>
+<script src = "javascripts/script.js"></script>
+<link href="stylesheets/script.css" rel="stylesheet"/>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2DPDB</title>
+</head>
+<body style="background-color: rgba(127, 255, 212, 0.482);">
+    
+    <div class="box" style="margin-top: 8%;background-color: aliceblue;margin-left: 18%;width: 1000px;height: 500px;border-radius: 30px;" id = "LS">
+        <ol>
+            <br>
+            <div>
+                <h1 style="font-size: 130px;">로그인</h1>
+            </div>        
+        </ol>
+        <ol>
+            <h1>아이디</h1>
+            <input type="text" name="id" placeholder="  ID" id = 'inid' style="border-radius: 25px;width: 400px;height: 50px;font-size: xx-large;background-color: rgba(128, 128, 128, 0.125);border: none;">
+            <br>
+            <h1>비밀번호</h1>
+            <input type="password" name="pw" placeholder="  Password" id = 'inpw' style="border-radius: 25px;width: 400px;height: 50px;font-size: xx-large;background-color: rgba(128, 128, 128, 0.125);border: none;">
+            <br>
+            <br>
+            <input type="submit" value="로그인" class="btn" onclick="LLogin()" style="width: 375px;height: 50px;">
+            <br>
+            <a href="/join" style="color: gray;">회원가입</a>
+        </ol>
+    </div>
+    </body>
+    <script>
+        function LLogin() {
+            var id = document.getElementById('inid').value;
+            var pw = document.getElementById('inpw').value;
+
+            jsonData = JSON.stringify({
+                id: id,
+                pw: pw,
+            });
+
+            fetch('/LLogin', {
+                headers: {
+                    'Accept': "application/json",
+                    "Content-Type": "application/json",
+                },
+                method: 'POST',
+                body: jsonData,
+            })
+            .then((response) => rest = response.json())
+            .then((rest) => {
+                alert(rest.res)
+                
+                var a = rest.id; 
+                console.log(rest.id)
+                localStorage.setItem("id", a)
+            });
+            location.href = "/5/5"
+        }
+    </script>
+    <link href="/stylesheets/script.css" rel="stylesheet"/>
+</html>

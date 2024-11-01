@@ -1,0 +1,62 @@
+div#header
+{   
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+div#main
+{   
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+}
+div#picture
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+input#Brush {
+    background: url("https://img.lovepik.com/free-png/20211216/lovepik-writing-brush-png-image_401706075_wh1200.png") no-repeat;
+    width: 150px;
+    height: 65px;
+    background-size: 150px 65px;
+}
+input#Stamp1 {
+    background: url("https://img.lovepik.com/element/45004/4395.png_860.png") no-repeat;
+    width: 150px;
+    height: 65px;
+    background-size: 150px 65px;
+}
+input#Stamp2 {
+    background: url("https://img.lovepik.com/element/45004/5223.png_860.png") no-repeat;
+    width: 150px;
+    height: 65px;
+    background-size: 150px 65px;
+}
+input#Paint {
+    background: url("https://img.lovepik.com/element/40169/8504.png_860.png") no-repeat;
+    width: 150px;
+    height: 65px;
+    background-size: 150px 65px;
+}
+input#Eraser {
+    background: url("https://png.pngtree.com/png-clipart/20190520/original/pngtree-childrens-appliances-eraser-white-blue-png-image_3901737.jpg") no-repeat;
+    width: 150px;
+    height: 65px;
+    background-size: 150px 65px;
+}
+input#Clear {
+    background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSd31wCKgmSZEL5nMFWw-UzNo6cY7YUQXLnIw&s") no-repeat;
+    width: 150px;
+    height: 65px;
+    background-size: 150px 65px;
+}
+div#LS
+{   
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+div#JS
+{   
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}

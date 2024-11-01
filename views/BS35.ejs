@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewpot"content="width=device-width initial-scale=1.0">
+    <title>2DPDB</title>
+</head>
+<body style="background-color: rgba(0, 255, 255, 0.125);">
+    <div id = "header">
+        <ol>
+            <br>
+            <input type="button" id = "save" value="save" style="width: 130px;height: 42.5px;" onclick="sendBoard()">
+            <input type="button" id = "bring" value="bring" style="width: 130px;height: 42.5px;" onclick="bringBoard()">
+        </ol>
+        <ol><h1 style="text-align: center;">2D 픽셀 그림판</h1></ol>
+        <ol>
+            <br>
+            <div style="text-align: center;">
+                <input type="button" value="Login" style="width: 130px;height: 42.5px;" onclick="location = '/login'">
+                <input type="button" value="join" style="width: 130px;height: 42.5px;" onclick="location = '/join'">
+            </div>
+        </ol>
+    </div>
+    <hr>
+    <div id="main">
+        <!-- 팔레트 시작 -->
+        <ol>
+            <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Colors</h2>
+            <input type="button" style="width: 75px;height: 50px;background-color: pink;" class = "palette">
+            <input type="button" style="width: 75px;height: 50px;background-color: red;" class = "palette">
+            <br>
+            <input type="button" style="width: 75px;height: 50px;background-color: #c60000;" class = "palette">
+            <input type="button" style="width: 75px;height: 50px;background-color: orange;" class = "palette">
+            <br>
+            <input type="button" style="width: 75px;height: 50px;background-color: orangered;" class = "palette">
+            <input type="button" style="width: 75px;height: 50px;background-color: rgb(139, 34, 34);" class = "palette">
+            <br>
+            <input type="button" style="width: 75px;height: 50px;background-color: rgba(255, 255, 0, 0.5);" class = "palette">
+            <input type="button" style="width: 75px;height: 50px;background-color: yellow;" class = "palette">
+            <br>
+            <input type="button" style="width: 75px;height: 50px;background-color: greenyellow;" class = "palette">
+            <input type="button" style="width: 75px;height: 50px;background-color: green;" class = "palette">
+            <br>
+            <input type="button" style="width: 75px;height: 50px;background-color: powderblue;" class = "palette">
+            <input type="button" style="width: 75px;height: 50px;background-color: blue;" class = "palette">  
+            <br>
+            <input type="button" style="width: 75px;height: 50px;background-color: darkblue;" class = "palette">
+            <input type="button" style="width: 75px;height: 50px;background-color: purple;" class = "palette">
+            <br>
+            <input type="button" style="width: 75px;height: 50px;background-color: gray;" class = "palette">
+            <input type="button" style="width: 75px;height: 50px;background-color: black;color: white;" class = "palette">
+        </ol>
+        <!-- 팔레트 끝 -->
+
+        <!-- 캔버스 시작 -->
+        <ol>
+            <br><br>
+            <div style="text-align: center;">
+                <h2 style="display:inline;">그림 이름 : </h2>
+                <input type="text" name="pictureName" placeholder="Picture Name" id = 'pictureName'>
+            </div>
+            <br>
+            <div style="text-align: center;">
+                <input type="button" style="width: 70px;height: 70px;" class = "canvas" id="00">
+                <input type="button" style="width: 70px;height: 70px;" class = "canvas" id="10">
+                <input type="button" style="width: 70px;height: 70px;" class = "canvas" id="20">
+                <br>
+                <input type="button" style="width: 70px;height: 70px;" class = "canvas" id="01">
+                <input type="button" style="width: 70px;height: 70px;" class = "canvas" id="11">
+                <input type="button" style="width: 70px;height: 70px;" class = "canvas" id="21">
+                <br>
+                <input type="button" style="width: 70px;height: 70px;" class = "canvas" id="02">
+                <input type="button" style="width: 70px;height: 70px;" class = "canvas" id="12">
+                <input type="button" style="width: 70px;height: 70px;" class = "canvas" id="22">
+                <br>
+                <input type="button" style="width: 70px;height: 70px;" class = "canvas" id="03">
+                <input type="button" style="width: 70px;height: 70px;" class = "canvas" id="13">
+                <input type="button" style="width: 70px;height: 70px;" class = "canvas" id="23">
+                <br>    
+                <input type="button" style="width: 70px;height: 70px;" class = "canvas" id="04">
+                <input type="button" style="width: 70px;height: 70px;" class = "canvas" id="14">
+                <input type="button" style="width: 70px;height: 70px;" class = "canvas" id="24">
+            </div>
+        </ol>
+        <!-- 캔버스 끝 -->
+
+        <ol>
+            <div style="text-align: center;">
+                <h2>Tools</h2>
+                <input type="button" xstyle="width: 150px;height: 65px;font-weight: 900" class = "tool" id  = "Brush">
+                <br>
+                <input type="button"  style="width: 150px;height: 65px;font-weight: 900" class = "tool" id = "Stamp1">
+                <br>
+                <input type="button"  style="width: 150px;height: 65px;font-weight: 900" class = "tool" id = "Stamp2">
+                <br>
+                <input type="button" style="width: 150px;height: 65px;font-weight: 900" class = "tool" id = "Paint">
+                <br>
+                <input type="button"  style="width: 150px;height: 65px;font-weight: 900;" class = "tool" id = "Eraser">
+                <br>
+                <input type="button" style="width: 150px;height: 65px;font-weight: 900" id="Clear" id = "Clear">
+            </div>
+        </ol>
+    </div>
+    <div style="text-align: center;">
+        <h2>Drawing Board Size</h2>
+        <input type="button" value="3 * 5" style="width: 80px;height: 70px;" onclick="location = '/BS35'">
+        <input type="button" value="5 * 5" style="width: 80px;height: 70px;" onclick="location = '/BS55'">
+        <input type="button" value="7 * 5" style="width: 80px;height: 70px;" onclick="location = '/BS75'">
+        <input type="button" value="10 * 10" style="width: 80px;height: 70px;" onclick="location = '/BS1010'">
+    </div>
+    <input type="button" value="Test" style="width: 130px;height: 42.5px;" onclick="Test()">
+</body>
+<script src = "javascripts/script.js"></script>
+<link href="stylesheets/script.css" rel="stylesheet"/>
+
+<script>
+    function sendBoard() {
+        data = [];
+        var pictureName = document.getElementById('pictureName').value
+        var result = "";
+        for(var r = 0; r < 5; r++) {
+            for(var c = 0; c < 3;c++) {
+                var rc = c.toString()+r.toString();
+                console.log(rc);
+                var col = document.getElementById(rc).style.backgroundColor;
+                var point = {
+                    'row': r,
+                    'col': c,
+                    'color': col,
+                };
+                data.push(point);
+            }
+        }
+        console.log(data);
+        jsonData = JSON.stringify({
+            rows: 5,
+            cols: 3,
+            pictureName: pictureName,
+            data: data,
+        });
+        console.log(jsonData);
+        fetch('/saveBoard', {
+            headers: {
+                'Accept': "application/json",
+                "Content-Type": "application/json",
+            },
+            method: 'POST',
+            body: jsonData,
+        })
+        .then((response) => rest = response.json())
+        .then((rest) => alert(rest.res));
+    };
+</script>
+<script>
+    
+</script>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewpot"content="width=device-width initial-scale=1.0">
+    <title>2DPDB</title>
+</head>
+<script>
+    length = localStorage.getItem("length")
+    if('<%=length%>' == "")
+    {
+        location.href = '/own//'
+    }
+</script>
+<body style="background-color: rgba(0, 255, 255, 0.125);">
+    <h1 style="text-align: center;">내 그림</h1>
+    <div id = "header">
+    </div>
+    <input type="hidden" id="length", value=<%=length%>>
+    <hr>
+    <div id = "picture">
+        <% for(r = 1; r <= length; ++r) { %>
+            <h2 style="display: inline;"><%=r%>. </h2>
+            <h2 style="display: inline;"><%=pictureName[r-1]%> </h2>
+            <input type="button" value="생성" style="width: 70px;height: 35px;background-color: 'empty';" id = "<%=id[r-1]%>" onclick="bringBoard(this.id)">
+            <input type="button" value="삭제" style="width: 70px;height: 35px;background-color: 'empty';background-color: rgba(255, 0, 0, 0.75);" id = "<%=id[r-1]%>" onclick="deleteBoard(this.id)">
+            <br/>
+        <% } %>
+    </div>
+</body>
+<script>
+    document.getElementById("length").value = length;
+    console.log('<%=length%>')
+</script>
+<script src = "/javascripts/script.js"></script>
+</html>
