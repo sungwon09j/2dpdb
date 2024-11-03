@@ -77,6 +77,13 @@
             </div>
             <input type="hidden" id="rowNum", value="<%= row %>">
             <input type="hidden" id="colNum", value="<%= col %>">
+            <br><br>
+            <div style="text-align: center;">
+                <input type="text" placeholder="가로" id = "col" style="width: 150px;">
+                <input type="text" placeholder="세로" id = "row" style="width: 150px;">
+                <br>
+                <input type="button" value="Board Size Change" style="width: 300px;height: 42.5px;" onclick="BSC()">
+            </div>
         </ol>
         <!-- 캔버스 끝 -->
 
@@ -98,12 +105,6 @@
         </ol>
     </div>
     <br>
-    <div style="text-align: center;">
-        <input type="text" placeholder="가로(10이하)" id = "col" style="width: 150px;">
-        <input type="text" placeholder="세로(10이하)" id = "row" style="width: 150px;">
-        <br>
-        <input type="button" value="Board Size Change" style="width: 300px;height: 42.5px;" onclick="BSC()">
-    </div>
 </body>
 <script src = "/javascripts/script.js"></script>
 <link href="/stylesheets/script.css" rel="stylesheet"/>
