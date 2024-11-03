@@ -19,10 +19,10 @@ router.get('/:row/:col', function(req, res, next) {
   res.render('Board', {row: row, col: col});
 });
 
-router.get('/:own//', function(req, res, next) {
+router.get('/own/', function(req, res, next) {
   //  res.render('index', { title: 'Express' });
   console.log(body)
-  res.render('own', {length: body.length, pictureName: body.pictureName, id: body.id});
+  res.render('Own', {length: body.length, pictureName: body.pictureName, id: body.id});
   console.log('sisi')
 });
 
