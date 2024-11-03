@@ -309,6 +309,12 @@ function BSC()
 {
     row = document.getElementById("row").value
     col = document.getElementById("col").value
+    if(row > 50) {
+        row = 50;
+    }
+    if(col > 50) {
+        col = 50;
+    }
     location.href = "/"+row+"/"+col;
 }
 function GOwn()
