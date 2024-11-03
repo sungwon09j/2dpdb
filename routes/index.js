@@ -4,7 +4,7 @@ var cookieParser = require('cookie-parser');
 var router = express.Router();
 var db = require('../config/mysql');
 var conn = db.init();
-var body;
+var body = "";
 
 
 /* GET home page. */
@@ -19,8 +19,12 @@ router.get('/:row/:col', function(req, res, next) {
   res.render('Board', {row: row, col: col});
 });
 
-router.get('/own/', function(req, res, next) {
+router.get('/own', function(req, res, next) {
   console.log(body)
+  if(body == "")
+  {
+    res.render('Board', {row: "change", col: "change"});
+  }
   res.render('Own', {length: body.length, pictureName: body.pictureName, id: body.id});
   console.log('sisi')
 });
@@ -108,8 +112,11 @@ router.post('/MyPicture', function(req, res) {
 
 router.post('/GoOwn', function(req, res) {
   body = req.body;
-  console.log("/")
-  console.log(body)
+})
+
+router.post('/Logout', function(req, res) {
+  body = "";
+  console.log("clear")
 })
 
 router.post('/deleteBoard', function(req, res) {

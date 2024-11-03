@@ -373,10 +373,9 @@ function GOwn()
                 body: jsonData,
             })
             .then((response) => rest = response.json())
-        .then((rest) => {console.log(rest.res)});
         });
         console.log(a);
-        location.href = "/own/";
+        location.href = "/own";
     }
 }
 
@@ -407,6 +406,14 @@ if (localStorage.getItem("id") != "")
     logbtn.style.display = 'none'
     jobtn.style.width = '220px';
     jobtn.value = 'Logout'
+    fetch('/Logout', {
+        headers: {
+            'Accept': "application/json",
+            "Content-Type": "application/json",
+        },
+        method: 'POST',
+        body: "",
+    })
 }
 else
 {
