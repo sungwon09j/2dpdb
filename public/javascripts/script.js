@@ -376,7 +376,7 @@ function GOwn()
         .then((rest) => {console.log(rest.res)});
         });
         console.log(a);
-        location.href = "/own//";
+        location.href = "/own/";
     }
 }
 
