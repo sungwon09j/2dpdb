@@ -59,7 +59,7 @@ router.post('/JJoin', function(req, res) {
     if(err)
       console.log('query does not execured '+ err);
     else {
-      res.json({res:"OK Good"});
+      res.json({res:"회원가입 성공"});
     }
   });
 })
