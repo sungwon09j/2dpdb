@@ -45,7 +45,7 @@ router.post('/saveBoard', function(req, res) {
     if(err)
       console.log('query does not execured '+ err);
     else {
-      res.json({res:"OK Good"});
+      res.json({res:"저장 성공"});
     }
   });
 })
@@ -126,7 +126,7 @@ router.post('/deleteBoard', function(req, res) {
     if(err)
       console.log('query does not execured '+ err);
     else {
-      res.send({res : "ㅅㄱ"});
+      res.send({res : "삭제 성공"});
     }
   });
 })
